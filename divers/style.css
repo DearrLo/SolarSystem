@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.body-class {
+    background-image: url("../pictures/wp7034497-minimalist-universe-wallpapers.png");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100%; 
+}
+
+
+.h1-text {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    color: #fff6ff;
+    font-size: 50px;
+    font-family: "Space Grotesk", sans-serif;
+    border-bottom: 1px solid #fff6ff;
+    box-shadow: 0 4px 4px rgba(191, 172, 172, 0.5);
+}
