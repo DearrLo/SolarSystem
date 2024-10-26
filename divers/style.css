@@ -23,3 +23,107 @@ html, body {
     border-bottom: 1px solid #fff6ff;
     box-shadow: 0 4px 4px rgba(191, 172, 172, 0.5);
 }
+
+
+/* Style de ma barre de nav */
+
+.navigation-class {
+    display: flex;
+    justify-content: center; 
+    gap: 70px; 
+    align-items: center; 
+    margin-top: 30px; 
+}
+
+/* paramètres de petite anim sous catégo */
+.navigation-class a {
+    border-radius: 15px;
+    text-decoration: none; 
+    transition: transform 0.6s ease;
+}
+
+.navigation-class a:hover {
+    text-decoration: none; 
+    transform: scale(1.1);   
+}
+
+
+/* dropdown parent aesthetic */
+.dropbtn {
+    background-color: black;
+    color: #f6f6f6;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #000000; 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Afficher le dropdown au survol */
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* ajout d'un media query écrans de >600px */
+@media (max-width: 600px) {
+    .h1-text {
+        font-size: 30px; 
+        margin-top: 5px;
+    }
+
+    .body-class {
+        background-size: contain; /* pour les petits écrans */
+    }
+}
+
+
+
+/* style de mon footer */
+.copyrights {
+color: white;
+display: flex;
+justify-content: center;
+margin-top : 750px;
+}
+
+.footer-style {
+color: white;
+font-size: 20px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.footer-style a {
+text-decoration: none;
+color: white;
+
+}
