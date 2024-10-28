@@ -6,10 +6,11 @@ html, body {
 
 
 .body-class {
-    background-image: url("../pictures/wp7034497-minimalist-universe-wallpapers.png");
+    background-image: url("../pictures/space.jpg");
     background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat; 
-    height: 100%; 
+    background-attachment: fixed; 
 }
 
 
@@ -118,12 +119,35 @@ margin-top : 750px;
 color: white;
 font-size: 20px;
 display: flex;
-justify-content: space-evenly;
-align-items: center;
+justify-content: center;
+gap: 200px;
+margin-top: 20px;
 }
 
 .footer-style a {
 text-decoration: none;
 color: white;
 
+}
+
+.differents-planets-and-stars {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+
+
+#sun {
+    width: 30%; 
+    height: auto;
+    margin-top: 50px;
+}
+
+#mercury {
+    width: 2%;
+    height: auto;
+    margin-left: 300px;
+    margin-top: 400px;
 }
