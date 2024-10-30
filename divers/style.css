@@ -6,7 +6,7 @@ html, body {
 
 
 .body-class {
-    background-image: url("../pictures/space.jpg");
+    background-image: url(../Divers/Pictures/Background/space.jpg);
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -26,14 +26,15 @@ html, body {
 }
 
 
-/* Style de ma barre de nav */
 
+/* Style de ma barre de nav */
 .navigation-class {
     display: flex;
     justify-content: center; 
     gap: 70px; 
     align-items: center; 
     margin-top: 30px; 
+    margin-bottom: 150px;
 }
 
 /* paramètres de petite anim sous catégo */
@@ -49,48 +50,69 @@ html, body {
 }
 
 
+
+
 /* dropdown parent aesthetic */
 .dropbtn {
-    background-color: black;
+    background-color: black; 
     color: #f6f6f6;
+    font-size: 16px;
     padding: 10px;
     border-radius: 15px;
     cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.4s ease; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .dropbtn:hover {
-    background-color: #000000; 
+    background-color: black;
+    box-shadow: 0 0 15px rgba(205, 198, 198, 0.8);
 }
 
-.dropdown {
+
+/* Style de la dropdown */
+dropdown {
     position: relative;
     display: inline-block;
 }
 
 .dropdown-content {
-    display: none; 
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+    min-width: 130px;
     z-index: 1;
+    overflow: hidden;
+    margin-top: 2px;
+    transform: translateY(10px);
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    font-size: 14px;
+    padding: 15px;
     text-decoration: none;
-    display: block;
+    display: block; 
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.4;
+    text-align: center; 
+    transition: all 0.1s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(75, 73, 73, 0.1);
+    color: #070707;
 }
 
 /* Afficher le dropdown au survol */
 .dropdown:hover .dropdown-content {
-    display: block; 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    border-radius: 5%;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
 
 
 /* ajout d'un media query écrans de >600px */
@@ -107,119 +129,198 @@ html, body {
 
 
 
-/* style de mon footer */
-.copyrights {
-color: white;
-display: flex;
-justify-content: center;
-margin-top : 750px;
-}
-
-.footer-style {
-color: white;
-font-size: 20px;
-display: flex;
-justify-content: center;
-gap: 200px;
-margin-top: 20px;
-}
-
-.footer-style a {
-text-decoration: none;
-color: white;
-
-}
-
-.differents-planets-and-stars {
-    display: flex;
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    gap: 20px; 
-}
 
 
 
-/* CSS of da sun */
+
 #sun {
-    width: 30%; 
+    width: 100%;
     height: auto;
-    margin-top: 50px;
-    box-shadow: 0px 0px 25px -15px rgba(11, 11, 11, 0.8);
-    border-radius: 50%;
-    transition: box-shadow 0.8s ease;
+    position: relative;
+    top: -8rem; 
+        box-shadow: 0px 0px 25px -15px rgba(11, 11, 11, 0.8);
+        border-radius: 50%;
+        transition: box-shadow 0.8s ease;
+            animation: rotate 5s linear infinite, pulse 4s ease-in-out infinite;
+            filter: drop-shadow(10px 0px 10px rgba(249, 195, 3, 0.8)); /* for my light around the sun */
+            border-radius: 50%; /* radius for the light just above */
 }
 
-
-/* CSS of Mercury */
 #mercury {
-    width: 2%;
-    height: auto;
-    margin-left: 250px;
-    margin-top: 400px;
-    box-shadow: 15px 30px 10px rgba(15, 15, 15, 0.4); /* ombre principale */
+    position: relative;
+    top: 2rem; 
+    left: 6rem;
+width: 40%;
+height: auto;
+box-shadow: 15px 30px 10px rgba(0, 0, 0, 0.7);
     border-radius: 60%; /* arrondit les bords */
     transition: box-shadow 15s ease; 
+        animation: gentleFloat 4s ease-in-out infinite;
 }
 
-/* CSS of Venus */
 #venus {
-    width: 3%;
+    position: relative;
+    top: 1rem; 
+    left: 2rem;
+    width: 60%;
     height: auto;
-    margin-left: 5px;
-    margin-top: 385px;
-    box-shadow: 10px 30px 10px rgba(15, 15, 15, 0.3); /* ombre principale */
-    border-radius: 80%; 
-    transition: box-shadow 8s ease; 
-}
-
-/* CSS of DA Earth */
+        box-shadow: 10px 30px 10px rgba(15, 15, 15, 0.3); /* ombre principale */
+        border-radius: 80%; 
+        transition: box-shadow 8s ease; 
+    }
+    
 #earth {
-    width: 5%;
+    width: 80%;
     height: auto;
-    margin-top: 360px;
-    margin-left: 5px;
-    box-shadow: 10px 30px 10px rgba(15, 15, 15, 0.2); /* ombre principale */
-    border-radius: 80%; 
-    transition: box-shadow 6s ease; 
-}
+        box-shadow: 10px 30px 10px rgba(15, 15, 15, 0.2); /* ombre principale */
+        border-radius: 80%; 
+        transition: box-shadow 6s ease; 
+            animation: rotate 160s linear infinite;
+    }
 
-/* CSS of Mars */
 #mars {
-    width: 3.5%;
+    position: relative;
+    top: 1rem; 
+    width: 60%;
     height: auto;
-    margin-top: 380px;
-    box-shadow: 10px 30px 10px rgba(15, 15, 15, 0.15); /* ombre principale */
-    border-radius: 80%; 
-    transition: box-shadow 4s ease; 
-}
+        box-shadow: 10px 30px 10px rgba(15, 15, 15, 0.15); /* ombre principale */
+        border-radius: 80%; 
+        transition: box-shadow 4s ease; 
+    }
 
-/* CSS of Jupiter */
 #jupiter {
-    width: 9%;
+    width: 100%;
     height: auto;
-    margin-top: 320px;
-    margin-left: 7px;
-    box-shadow: 10px 30px 10px rgba(139, 132, 132, 0.1); /* ombre principale */
-    border-radius: 80%; 
-    transition: box-shadow 10s ease;
-}
+        box-shadow: 10px 40px 20px rgba(56, 54, 54, 0.1); /* ombre principale */
+        border-radius: 80%; 
+        transition: box-shadow 10s ease;
+            animation: floating 6s ease-in-out infinite;
+    }
 
 #saturn {
-    width: 12%;
+    width: 100%;
     height: auto;
-    margin-top: 350px;
-    margin-left: -15px;
-}
+    }
 
 #uranus {
-    width: 4%;
+    position: relative;
+    top: 1rem; 
+    width: 70%;
     height: auto;
-    margin-top: 370px;
+    }
+
+#neptune  {
+    position: relative;
+    top: 1.5rem; 
+    width: 60%;
+    height: auto;
+    animation: floating 4s ease-in-out infinite;
+    transform-origin: center; 
+    }
+
+
+
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .footer-logo {
+        width: 30px;
+    }
+    .footer-text {
+        font-size: 12px;
+    }
 }
 
-#neptune {
-    width: 3%;
+
+
+
+/* Footer CSS */
+.futuristic-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(18, 18, 36, 0.9), rgba(28, 28, 48, 0.9));
+    padding: 5px 0;
+    color: rgba(200, 200, 200, 0.7);
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-logo {
+    width: 40px;
     height: auto;
-    margin-top: 380px;
-    margin-left: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0px 0px 6px #84e8ec); /* Pour l'effet lumineux avant de passer la souris */
+}
+
+.footer-logo:hover {
+    transform: scale(1.1); 
+    filter: drop-shadow(0px 0px 10px #5387aa); 
+}
+
+.footer-text {
+    font-size: 13px;
+    margin-bottom: -5px;
+    color: #cfcfe2;
+    letter-spacing: 0.8px;
+    opacity: 0.9;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .footer-logo {
+        width: 30px;
+    }
+    .footer-text {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+/* animations of pulsation for my SUN */
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /*Basic size*/
+    }
+    50% {
+        transform: scale(1.03); /* Size we ask for the pulsation */
+    }
+}
+
+
+/* Rotations of planets with more personalisation in the #IDPlanet */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+/* Effect who's more like... natural for a planet with a quick rotation as neptune */
+@keyframes oscillate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg); 
+    }
+    100% {
+        transform: rotate(-10deg); 
+    }
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
 }
