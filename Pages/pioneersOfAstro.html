@@ -10,10 +10,15 @@
 <body class="body-class">
     <header>
         <nav class="sticky-navbar">
-            <div class="dropdown">
+            <!-- Bouton Home séparé pour éviter le menu déroulant -->
+            <div class="home-button-container">
                 <a href="index.html">
                     <img src="../Divers/Pictures/Icons/home.png" alt="home" id="home-button">
                 </a>
+            </div>
+            
+            <!-- Dropdown "Prelude to space exploration" avec une classe spécifique -->
+            <div class="dropdown centered-dropdown">
                 <button class="dropbtn">Prelude to space exploration</button>
                 <div class="dropdown-content">
                     <a href="fromIndexHTML/pioneersOfAstro.html">Pioneers of astronomy</a>
@@ -22,6 +27,7 @@
                 </div>
             </div>
             
+            <!-- Dropdown "Futures missions" -->
             <div class="dropdown">
                 <button class="dropbtn">Futures missions</button>
                 <div class="dropdown-content">
@@ -30,6 +36,7 @@
                 </div>
             </div>
             
+            <!-- Dropdown "Celestial wonders" -->
             <div class="dropdown">
                 <button class="dropbtn">Celestial wonders</button>
                 <div class="dropdown-content">
@@ -41,9 +48,8 @@
         </nav>
     </header>
 
-
     <main>
-        <p> From the first time people looked up at the stars, trying to make sense of what was out there, we’ve been on a path to understanding the universe. Ancient astronomers mapped the skies, laying down the basics, and then people like Copernicus and Galileo came along, flipping everything on its head by questioning our place in it all. Fast forward a few centuries, and suddenly we’re launching Sputnik, walking on the Moon, and sending rovers to Mars. Today, we're pushing even further, eyeing distant exoplanets and wondering what's next. It's more than curiosity—it’s this relentless drive to see just how far we can go.</p>
+        <p>From the first time people looked up at the stars, trying to make sense of what was out there...</p>
     </main>
 </body>
 </html>
