@@ -1,8 +1,16 @@
 html, body {
     height: 100%;
     margin: 0;
-    padding: 0;
 }
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
 
 
 .body-class {
@@ -27,7 +35,7 @@ html, body {
 
 
 
-/* Style de ma barre de nav */
+/* Style de la barre de nav */
 .navigation-class {
     display: flex;
     justify-content: center; 
@@ -37,7 +45,7 @@ html, body {
     margin-bottom: 150px;
 }
 
-/* paramètres de petite anim sous catégo */
+/* Paramètres de petite animation */
 .navigation-class a {
     border-radius: 15px;
     text-decoration: none; 
@@ -45,76 +53,70 @@ html, body {
 }
 
 .navigation-class a:hover {
-    text-decoration: none; 
     transform: scale(1.1);   
 }
 
+/* Dropdown parent aesthetic */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-
-
-/* dropdown parent aesthetic */
 .dropbtn {
     background-color: black; 
     color: #f6f6f6;
     font-size: 16px;
     padding: 20px;
-    margin-right: 50px;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.2s ease, box-shadow 0.4s ease; 
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    text-align: center;
 }
 
 .dropbtn:hover {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 15px rgba(205, 198, 198, 0.8);
+    color: #fff;
 }
 
-
-/* Style de la dropdown */
-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
+/* Style du dropdown content */
 .dropdown-content {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
-    background-color: white;
-    min-width: 130px;
+    top: 100%; /* Place le menu juste en dessous du bouton */
+    left: 50%; /* Place le point de référence à la moitié du bouton */
+    transform: translateX(-50%); /* Déplace pour centrer le contenu sous le bouton */
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     z-index: 1;
-    overflow: hidden;
-    margin-top: 2px;
-    transform: translateY(10px);
-}
-
-.dropdown-content a {
-    color: black;
-    font-size: 14px;
-    padding: 15px;
-    text-decoration: none;
-    display: block; 
-    font-family: "Space Grotesk", sans-serif;
-    line-height: 1.4;
-    text-align: center; 
-    transition: all 0.1s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: rgba(75, 73, 73, 0.1);
-    color: #070707;
+    display: none; /* Masqué par défaut */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition pour une apparition plus fluide */
 }
 
 /* Afficher le dropdown au survol */
 .dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    border-radius: 5%;
+    display: block; /* Affiche le menu déroulant */
 }
 
+/* Style des liens dans le dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.4;
+    transition: background-color 0.2s ease;
+}
 
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
 /* ajout d'un media query écrans de >600px */
 @media (max-width: 600px) {
@@ -239,14 +241,17 @@ box-shadow: 15px 30px 10px rgba(0, 0, 0, 0.7);
 .futuristic-footer {
     display: flex;
     justify-content: center;
-    bottom: 0;
+    align-items: center;
     width: 100%;
+    max-width: none;
     background: linear-gradient(135deg, rgba(18, 18, 36, 0.9), rgba(28, 28, 48, 0.9));
-    padding: 5px 0;
+    padding: 10px 0;
     color: rgba(200, 200, 200, 0.7);
     text-align: center;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     font-family: "Space Grotesk", sans-serif;
+    margin-top: auto;
+    position: relative;
 }
 
 .footer-content {
@@ -257,23 +262,23 @@ box-shadow: 15px 30px 10px rgba(0, 0, 0, 0.7);
 }
 
 .footer-logo {
-    width: 40px;
+    width: 35px;
     height: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0px 0px 6px #84e8ec); /* Pour l'effet lumineux avant de passer la souris */
+    filter: drop-shadow(0px 0px 6px #84e8ec);
 }
 
 .footer-logo:hover {
     transform: scale(1.1); 
-    filter: drop-shadow(0px 0px 10px #5387aa); 
+    filter: drop-shadow(0px 0px 10px #5387aa);
 }
 
 .footer-text {
-    font-size: 13px;
-    margin-bottom: -5px;
+    font-size: 11px;
     color: #cfcfe2;
     letter-spacing: 0.8px;
     opacity: 0.9;
+    margin-bottom: -5px;
 }
 
 /* Responsive styling */
@@ -364,7 +369,7 @@ box-shadow: 15px 30px 10px rgba(0, 0, 0, 0.7);
     margin-right: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
-    border-radius: 50%; /* Maintient le bouton en cercle en tout temps */
+    border-radius: 50%; 
 }
 
 #home-button:hover {
@@ -373,63 +378,3 @@ box-shadow: 15px 30px 10px rgba(0, 0, 0, 0.7);
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.7);
 }
 
-/* Style des boutons */
-.sticky-navbar .dropdown {
-    position: relative;
-}
-
-.dropbtn {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #f6f6f6;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.5s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    text-align: center;
-    border: none; 
-    outline: none; 
-}
-
-.dropbtn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(205, 198, 198, 0.8);
-    color: #fff;
-}
-
-/* Dropdown content */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    z-index: 1;
-}
-
-.centered-dropdown .dropdown-content {
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: -120px; 
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    transition: background-color 0.2s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
