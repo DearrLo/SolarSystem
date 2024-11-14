@@ -340,6 +340,7 @@ box-shadow: 15px 30px 10px rgba(0, 0, 0, 0.7);
 
 
 /* PAGE PIONEERS OF SPACE */
+ /*linear-gradient(135deg, rgba(18, 18, 36, 0.9), rgba(28, 28, 48, 0.9)); VERSION BASIQUE NO CLINGY*/
 
 /* Nav bar */
 .sticky-navbar {
@@ -349,25 +350,29 @@ box-shadow: 15px 30px 10px rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(135deg, rgba(18, 18, 36, 0.9), rgba(28, 28, 48, 0.9));
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(62, 62, 62, 0.3);
+    background-image: url(../Divers/Pictures/Background/galaxie-cligno.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 30px 0;
+    box-shadow: 0 2px 20px rgba(102, 102, 102, 0.3);
     font-family: "Space Grotesk", sans-serif;
     z-index: 1000;
+    gap: 30px; 
 }
-
 /* Container for navbar items to ensure alignment */
 .sticky-navbar > div {
     display: flex;
     align-items: center;
+    margin-bottom: -8px;
 }
 
 /* Boutton Home */
 #home-button {
-    width: 40px;
+    width: 50px;
     height: auto;
     margin-right: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #b5b0b00c;
     filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
     border-radius: 50%; 
 }
@@ -376,5 +381,43 @@ box-shadow: 15px 30px 10px rgba(0, 0, 0, 0.7);
     transform: scale(1.2);
     border-radius: 90%;
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+h2 {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    margin-top: 120px;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+
+}
+
+h3 {
+    display: flex;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.main-div  {
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: -5px;
+    padding: 10px;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.section1-div, .section2-div {
+    flex: 1; 
+    padding: 30px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+p {
+    color: white;
 }
 
