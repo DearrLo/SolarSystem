@@ -14,6 +14,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="divers/style.css">
+    <link rel="stylesheet" href="PHP-elements/header.css">
+    <link rel="stylesheet" href="PHP-elements/footer.css">
 
     <iframe width="0.1" height="0.1" src="STOPhttps://www.youtube.com/embed/yhlu-FS18Qo?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="0.1" height="0.1" src="https://www.youtube.com/embed/yhlu-FS18Qo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -33,39 +35,8 @@
                 </h1>
 
 
-        
-
-<!-- ici, barre de nav avec dropdown -->
-<div class="container-fluid">
-    <nav class="navigation-class">
-        <div class="dropdown">
-            <button class="dropbtn">Space Prelude</button>
-            <div class="dropdown-content">
-                <a href="Pages/pioneersOfAstro.html">Pioneers of astronomy</a>
-                <a href="URL2">Early space missions</a>
-                <a href="URL3">Some space technologies</a>
-            </div>
-        </div>
-
-        <div class="dropdown">
-            <button class="dropbtn">Futures missions</button>
-            <div class="dropdown-content">
-                <a href="URL1">NASA's upcoming missions</a>
-                <a href="URL2">ESA'S upcoming missions</a>
-            </div>
-        </div>
-
-        <div class="dropdown">
-            <button class="dropbtn">Celestial wonders</button>
-            <div class="dropdown-content">
-                <a href="URL1">Supernovae and Nebulas</a>
-                <a href="URL2">Exoplanets and Distant Worlds</a>
-                <a href="URL3">Cosmic theories</a>
-            </div>
-        </div>
-    </nav>
-
-
+            <!-- Ma navbar include juste ici -->
+             <?php include('PHP-elements/navbar.php'); ?>
 
 
         <main class="content">
@@ -120,14 +91,8 @@
 
     </header>
 
-    <footer class="futuristic-footer">
-        <div class="footer-content">
-            <a href="https://dearrlo.github.io/Portfolio/" target="_blank" title="Portfolio">
-                <img src="Divers/Pictures/Icons/git.png" alt="GitHub Logo" class="footer-logo">
-            </a>
-            <p class="footer-text">&copy; 2024 — All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Mon include footer ici -->
+    <?php include('PHP-elements/footer.php'); ?>
 
 </div>
 </body>

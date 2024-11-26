@@ -1,0 +1,53 @@
+/* Footer CSS */
+.futuristic-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    background: linear-gradient(135deg, rgba(18, 18, 36, 0.9), rgba(28, 28, 48, 0.9));
+    padding: 10px 0;
+    color: rgba(200, 200, 200, 0.7);
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Space Grotesk", sans-serif;
+    margin-top: auto;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-logo {
+    width: 35px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0px 0px 6px #84e8ec);
+}
+
+.footer-logo:hover {
+    transform: scale(1.1); 
+    filter: drop-shadow(0px 0px 10px #5387aa);
+}
+
+.footer-text {
+    font-size: 11px;
+    color: #cfcfe2;
+    letter-spacing: 0.8px;
+    opacity: 0.9;
+    margin-bottom: -5px;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .footer-logo {
+        width: 30px;
+    }
+    .footer-text {
+        font-size: 12px;
+    }
+}
