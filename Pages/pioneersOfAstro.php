@@ -4,47 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/style.css">
-
+    <link rel="stylesheet" href="PHP-elements/header.css">
     <title>Pioneers of Astrology</title>
-
 </head>
 
 <body class="body-class">
     <header>
         <nav class="sticky-navbar">
+
             <!-- Bouton Home séparé pour éviter le menu déroulant -->
             <div class="home-button-container">
                 <a href="../index.html">
                     <img src="../Divers/Pictures/Icons/home.png" alt="home" id="home-button">
                 </a>
-            </div>
+            </div>  
             
-            <!-- Dropdown "Prelude to space exploration" avec une classe spécifique -->
-            <div class="dropdown">
-                <button class="dropbtn">Space Prelude</button>
-                <div class="dropdown-content">
-                    <a href="Pages/pioneersOfAstro.html">Pioneers of astronomy</a>
-                    <a href="URL2">Early space missions</a>
-                    <a href="URL3">Some space technologies</a>
-                </div>
-            </div>
-    
-            <div class="dropdown">
-                <button class="dropbtn">Futures missions</button>
-                <div class="dropdown-content">
-                    <a href="URL1">NASA's upcoming missions</a>
-                    <a href="URL2">ESA'S upcoming missions</a>
-                </div>
-            </div>
-    
-            <div class="dropdown">
-                <button class="dropbtn">Celestial wonders</button>
-                <div class="dropdown-content">
-                    <a href="URL1">Supernovae and Nebulas</a>
-                    <a href="URL2">Exoplanets and Distant Worlds</a>
-                    <a href="URL3">Cosmic theories</a>
-                </div>
-            </div>
         </nav>
     </header>
 
@@ -77,6 +51,7 @@
             </div>
        
     </main>
-    
+
+    <link rel="stylesheet" href="PHP-elements/footer.css"> 
 </body>
 </html>
