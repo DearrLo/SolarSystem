@@ -4,9 +4,9 @@
         <div class="dropdown">
             <button class="dropbtn">Space Prelude</button>
             <div class="dropdown-content">
-                <a href="Pages/pioneersOfAstro.html">Pioneers of astronomy</a>
-                <a href="URL2">Early space missions</a>
-                <a href="URL3">Some space technologies</a>
+                <a href="Pages/pioneersOfAstro.php">Pioneers of astronomy</a>
+                <a href="Pages/earlySpaceMission.php">Early space missions</a>
+                <a href="Pages/someSpaceTechnology.php">Some space technologies</a>
             </div>
         </div>
 

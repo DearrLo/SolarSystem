@@ -91,8 +91,9 @@
 
     </header>
 
-    <!-- Mon include footer ici -->
-    <?php include('PHP-elements/footer.php'); ?>
+    <footer>
+        <?php include('PHP-elements/footer.php'); ?>
+    </footer>
 
 </div>
 </body>
